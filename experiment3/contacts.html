@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Contact Me</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body{
+    height:100vh;
+    background:linear-gradient(120deg,#1e88e5,#42a5f5);
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+.container{
+    width:95%;
+    height:95vh;
+    background:white;
+    border-radius:15px;
+    padding:30px;
+    box-shadow:0 0 30px rgba(0,0,0,0.2);
+    overflow:auto;
+}
+
+h1{
+    text-align:center;
+    color:rgb(86,69,69);
+    margin-bottom:20px;
+}
+
+nav{
+    text-align:center;
+    margin-bottom:30px;
+}
+
+nav a{
+    text-decoration:none;
+    padding:12px 25px;
+    margin:10px;
+    font-size:18px;
+    font-weight:bold;
+    border-radius:30px;
+    background:#1f436d;
+    color:white;
+    display:inline-block;
+    transition:0.3s;
+}
+
+nav a:hover{
+    background:#74787e;
+    transform:scale(1.1);
+}
+
+h2{
+    margin-top:20px;
+    color:#333;
+    border-bottom:3px solid #1565c0;
+    padding-bottom:5px;
+}
+
+/* FORM */
+.contact-form{
+    width:60%;
+    margin-top:20px;
+}
+
+.contact-form label{
+    font-size:18px;
+    font-weight:bold;
+}
+
+.contact-form input,
+.contact-form textarea{
+    width:100%;
+    padding:12px;
+    margin:8px 0 20px 0;
+    border-radius:10px;
+    border:1px solid #ccc;
+    font-size:16px;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus{
+    outline:none;
+    border:2px solid #1565c0;
+}
+
+.contact-form button{
+    background:#1565c0;
+    color:white;
+    padding:12px 25px;
+    border:none;
+    border-radius:25px;
+    font-size:18px;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+.contact-form button:hover{
+    background:#0d47a1;
+    transform:scale(1.05);
+}
+
+p{
+    font-size:18px;
+    margin-top:10px;
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>Contact Me</h1>
+
+<nav>
+<a href="index.html">Home</a>
+<a href="about.html">About Me</a>
+<a href="projects.html">Projects</a>
+<a href="contact.html">Contact</a>
+</nav>
+
+<h2>Send me a message</h2>
+
+<form class="contact-form">
+<label>Name</label>
+<input type="text" placeholder="Enter your name">
+
+<label>Email</label>
+<input type="email" placeholder="Enter your email">
+
+<label>Message</label>
+<textarea rows="5" placeholder="Type your message"></textarea>
+
+<button type="submit">Send Message</button>
+</form>
+
+<h2>My Details</h2>
+<p>Email: itsmeishan14@gmail.com</p>
+<p>Phone: 9869382509</p>
+
+</div>
+
+</body>
+</html>

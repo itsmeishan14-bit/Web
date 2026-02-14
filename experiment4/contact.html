@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Checkout</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body{
+    background:linear-gradient(120deg,#1e88e5,#42a5f5);
+}
+
+.container{
+    width:95%;
+    margin:20px auto;
+    background:white;
+    border-radius:15px;
+    padding:25px;
+    box-shadow:0 0 25px rgba(0,0,0,0.2);
+}
+
+
+header{
+    text-align:center;
+    padding:20px;
+    color:#1f436d;
+}
+
+nav{
+    text-align:center;
+    margin-bottom:25px;
+}
+
+nav a{
+    text-decoration:none;
+    padding:12px 25px;
+    margin:10px;
+    font-size:18px;
+    font-weight:bold;
+    border-radius:30px;
+    background:#1f436d;
+    color:white;
+    display:inline-block;
+    transition:0.3s;
+}
+
+nav a:hover{
+    background:#74787e;
+    transform:scale(1.1);
+}
+
+
+form{
+    width:60%;
+    margin:auto;
+    font-size:18px;
+}
+
+fieldset{
+    border:2px solid #1565c0;
+    padding:20px;
+    margin-top:20px;
+    border-radius:10px;
+}
+
+legend{
+    color:#1565c0;
+    font-weight:bold;
+    padding:0 10px;
+}
+
+input, textarea, select{
+    width:100%;
+    padding:10px;
+    margin-top:8px;
+    margin-bottom:15px;
+    border-radius:8px;
+    border:1px solid #ccc;
+    font-size:16px;
+}
+
+input:focus, textarea:focus, select:focus{
+    outline:none;
+    border:2px solid #1565c0;
+}
+
+input[type="submit"]{
+    background:#1565c0;
+    color:white;
+    border:none;
+    padding:12px;
+    border-radius:25px;
+    font-size:18px;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+input[type="submit"]:hover{
+    background:#0d47a1;
+    transform:scale(1.05);
+}
+
+
+footer{
+    text-align:center;
+    margin-top:40px;
+    padding:15px;
+    background:#1f436d;
+    color:white;
+    border-radius:10px;
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<header>
+<h1>Checkout Form</h1>
+</header>
+
+<nav>
+<a href="index.html">Home</a>
+<a href="products.html">Products</a>
+<a href="cart.html">Cart</a>
+<a href="contact.html">Contact</a>
+</nav>
+
+<form>
+
+<fieldset>
+<legend>Personal Details</legend>
+
+Name:
+<input type="text" required>
+
+Email:
+<input type="email" required>
+
+Phone:
+<input type="tel">
+
+</fieldset>
+
+<fieldset>
+<legend>Delivery Address</legend>
+<textarea rows="4" placeholder="Enter full delivery address"></textarea>
+</fieldset>
+
+Payment Method:
+<select>
+<option>UPI</option>
+<option>Credit Card</option>
+<option>Debit Card</option>
+</select>
+
+Delivery Date:
+<input type="date">
+
+<input type="submit" value="Place Order">
+
+</form>
+
+<footer>
+<p>Secure Payment Gateway</p>
+</footer>
+
+</div>
+</body>
+</html>

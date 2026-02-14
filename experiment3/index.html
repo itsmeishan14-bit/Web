@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>My Personal Website</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+body{
+    height:100vh;
+    background:linear-gradient(120deg,#1e88e5,#42a5f5);
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+.container{
+    width:95%;
+    height:95vh;
+    background:white;
+    border-radius:15px;
+    padding:30px;
+    box-shadow:0 0 30px rgba(0,0,0,0.2);
+    overflow:auto;
+}
+
+
+h1{
+    text-align:center;
+    color:rgb(86, 69, 69);
+    margin-bottom:20px;
+}
+
+
+nav{
+    text-align:center;
+    margin-bottom:30px;
+}
+
+nav a{
+    text-decoration:none;
+    padding:12px 25px;
+    margin:10px;
+    font-size:18px;
+    font-weight:bold;
+    border-radius:30px;
+    background:#1f436d;
+    color:white;
+    display:inline-block;
+    transition:0.3s;
+}
+
+nav a:hover{
+    background:#74787e;
+    transform:scale(1.1);
+}
+
+
+h2{
+    margin-top:20px;
+    color:#333;
+    border-bottom:3px solid #1565c0;
+    padding-bottom:5px;
+}
+
+p{
+    margin:10px 0;
+    line-height:1.6;
+    font-size:18px;
+}
+
+
+.goals{
+    display:flex;
+    justify-content:space-around;
+    gap:20px;
+    margin-top:20px;
+    flex-wrap:wrap;
+}
+
+.goal-card{
+    width:280px;
+    background:#f5f5f5;
+    border-radius:15px;
+    overflow:hidden;
+    box-shadow:0 0 15px rgba(0,0,0,0.15);
+    transition:0.3s;
+}
+
+.goal-card:hover{
+    transform:scale(1.05);
+}
+
+.goal-card img{
+    width:100%;
+    height:180px;
+    object-fit:cover;
+}
+
+.goal-card h3{
+    text-align:center;
+    padding:15px;
+    color:#1565c0;
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>My Personal Website</h1>
+
+<nav>
+<a href="index.html">Home</a>
+<a href="about.html">About Me</a>
+<a href="projects.html">Projects</a>
+<a href="contacts.html">Contact</a>
+</nav>
+
+<h2>Home</h2>
+<p>Hello! My name is Ishan Timalsina.</p>
+<p>I am a Computer Science Engineering student.</p>
+<p>This website is created using HTML & CSS.</p>
+
+<h2>My Goals</h2>
+
+<div class="goals">
+
+<div class="goal-card">
+<img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085">
+<h3>Become Web Developer</h3>
+</div>
+
+<div class="goal-card">
+<img src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b">
+<h3>Learn Ethical Hacking</h3>
+</div>
+
+<div class="goal-card">
+<img src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d">
+<h3>Build Real Projects</h3>
+</div>
+
+</div>
+
+</div>
+
+</body>
+</html>

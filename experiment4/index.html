@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>ShopEasy</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body{
+    background:linear-gradient(120deg,#1e88e5,#42a5f5);
+}
+
+
+.container{
+    width:95%;
+    margin:20px auto;
+    background:white;
+    border-radius:15px;
+    padding:25px;
+    box-shadow:0 0 25px rgba(0,0,0,0.2);
+}
+
+
+header{
+    text-align:center;
+    padding:20px;
+}
+header h1{
+    color:#1f436d;
+}
+header p{
+    font-size:18px;
+}
+
+nav{
+    text-align:center;
+    margin-bottom:20px;
+}
+
+nav a{
+    text-decoration:none;
+    padding:12px 25px;
+    margin:10px;
+    font-size:18px;
+    font-weight:bold;
+    border-radius:30px;
+    background:#1f436d;
+    color:white;
+    display:inline-block;
+    transition:0.3s;
+}
+
+nav a:hover{
+    background:#74787e;
+    transform:scale(1.1);
+}
+
+
+.main{
+    display:flex;
+    gap:30px;
+    flex-wrap:wrap;
+}
+
+
+.product{
+    flex:2;
+    background:#f5f5f5;
+    padding:20px;
+    border-radius:15px;
+    box-shadow:0 0 15px rgba(0,0,0,0.15);
+}
+
+.product img{
+    width:100%;
+    border-radius:15px;
+}
+
+.product a{
+    display:inline-block;
+    margin-top:15px;
+    background:#1565c0;
+    color:white;
+    padding:10px 20px;
+    border-radius:25px;
+    text-decoration:none;
+}
+
+
+aside{
+    flex:1;
+    background:#1565c0;
+    color:white;
+    padding:20px;
+    border-radius:15px;
+    text-align:center;
+    height:fit-content;
+}
+
+.video{
+    margin-top:30px;
+    text-align:center;
+}
+
+.video iframe{
+    border-radius:15px;
+}
+
+footer{
+    text-align:center;
+    margin-top:30px;
+    padding:15px;
+    background:#1f436d;
+    color:white;
+    border-radius:10px;
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<header>
+    <h1>ShopEasy Online Store</h1>
+    <p>Your one stop shop</p>
+</header>
+
+<nav>
+    <a href="index.html">Home</a>
+    <a href="products.html">Products</a>
+    <a href="cart.html">Cart</a>
+    <a href="contact.html">Contact</a>
+</nav>
+
+<div class="main">
+
+<section class="product">
+    <h2>Featured Product</h2>
+
+    <img src="https://images.unsplash.com/photo-1517336714731-489689fd1ca8">
+
+    <p>Powerful laptop for students and developers.</p>
+    <a href="product-details.html">View Details</a>
+</section>
+
+<aside>
+    <h2>🔥 Special Offer</h2>
+    <p>50% OFF on Headphones!</p>
+    <p>Limited Time Deal</p>
+</aside>
+
+</div>
+
+<div class="video">
+    <h2>Promo Video</h2>
+    <iframe width="560" height="315"
+    src="https://www.youtube.com/embed/1pD-yh1V5Sg"
+    allowfullscreen></iframe>
+</div>
+
+<footer>
+    <p>© 2026 ShopEasy</p>
+</footer>
+
+</div>
+</body>
+</html>

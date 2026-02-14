@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Product Details</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body{
+    background:linear-gradient(120deg,#1e88e5,#42a5f5);
+}
+
+.container{
+    width:95%;
+    margin:20px auto;
+    background:white;
+    border-radius:15px;
+    padding:25px;
+    box-shadow:0 0 25px rgba(0,0,0,0.2);
+}
+
+
+header{
+    text-align:center;
+    padding:20px;
+    color:#1f436d;
+}
+
+nav{
+    text-align:center;
+    margin-bottom:25px;
+}
+
+nav a{
+    text-decoration:none;
+    padding:12px 25px;
+    margin:10px;
+    font-size:18px;
+    font-weight:bold;
+    border-radius:30px;
+    background:#1f436d;
+    color:white;
+    display:inline-block;
+    transition:0.3s;
+}
+
+nav a:hover{
+    background:#74787e;
+    transform:scale(1.1);
+}
+
+
+.product{
+    display:flex;
+    gap:40px;
+    flex-wrap:wrap;
+    align-items:center;
+    justify-content:center;
+}
+
+.product img{
+    width:350px;
+    border-radius:15px;
+    box-shadow:0 0 15px rgba(0,0,0,0.2);
+}
+
+.specs{
+    max-width:400px;
+}
+
+h2{
+    margin-top:20px;
+    color:#1565c0;
+}
+
+
+details{
+    margin-top:15px;
+    background:#f5f5f5;
+    padding:15px;
+    border-radius:10px;
+    cursor:pointer;
+}
+
+summary{
+    font-weight:bold;
+    font-size:18px;
+}
+
+ul{
+    margin-top:10px;
+    line-height:1.8;
+    font-size:17px;
+}
+
+
+meter{
+    width:200px;
+    height:25px;
+    margin-top:10px;
+}
+
+
+footer{
+    text-align:center;
+    margin-top:40px;
+    padding:15px;
+    background:#1f436d;
+    color:white;
+    border-radius:10px;
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<header>
+<h1>Laptop Details</h1>
+</header>
+
+<nav>
+<a href="index.html">Home</a>
+<a href="products.html">Products</a>
+<a href="cart.html">Cart</a>
+<a href="contact.html">Contact</a>
+</nav>
+
+<section class="product">
+
+<figure>
+<img src="https://images.unsplash.com/photo-1517336714731-489689fd1ca8">
+<figcaption>High Performance Laptop</figcaption>
+</figure>
+
+<div class="specs">
+<h2>Specifications</h2>
+
+<details>
+<summary>Click to View Specs</summary>
+<ul>
+<li>16GB RAM</li>
+<li>1TB SSD</li>
+<li>Intel i7 Processor</li>
+<li>RTX Graphics</li>
+</ul>
+</details>
+
+<h2>Customer Review</h2>
+<meter value="4.5" min="0" max="5"></meter>
+</div>
+
+</section>
+
+<footer>
+<p>Return within 7 days</p>
+</footer>
+
+</div>
+</body>
+</html>
