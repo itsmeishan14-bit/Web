@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Registration and Login Form with seamless toggle between sign up and sign in." />
+  <title>Register &amp; Login</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="bg-shapes">
+    <div class="shape shape-1"></div>
+    <div class="shape shape-2"></div>
+    <div class="shape shape-3"></div>
+  </div>
+
+  <div class="container">
+    <!-- Toggle Switch -->
+    <div class="toggle-wrapper" id="toggleWrapper">
+      <div class="toggle-slider" id="toggleSlider"></div>
+      <button class="toggle-btn active" id="loginToggle" data-form="login">Login</button>
+      <button class="toggle-btn" id="registerToggle" data-form="register">Register</button>
+    </div>
+
+    <!-- Login Form -->
+    <form class="form form-active" id="loginForm" autocomplete="off">
+      <h2 class="form-title">Welcome Back</h2>
+      <p class="form-subtitle">Sign in to your account</p>
+
+      <div class="input-group">
+        <label for="loginEmail">Email</label>
+        <div class="input-wrapper">
+          <svg class="input-icon" viewBox="0 0 24 24"><path d="M20 4H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2zm0 4-8 5-8-5V6l8 5 8-5v2z"/></svg>
+          <input type="email" id="loginEmail" placeholder="you@example.com" required />
+        </div>
+      </div>
+
+      <div class="input-group">
+        <label for="loginPassword">Password</label>
+        <div class="input-wrapper">
+          <svg class="input-icon" viewBox="0 0 24 24"><path d="M18 8h-1V6A5 5 0 0 0 7 6v2H6a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V10a2 2 0 0 0-2-2zM12 17a2 2 0 1 1 0-4 2 2 0 0 1 0 4zm3-9H9V6a3 3 0 0 1 6 0v2z"/></svg>
+          <input type="password" id="loginPassword" placeholder="••••••••" required />
+          <button type="button" class="eye-btn" data-target="loginPassword" aria-label="Toggle password visibility">
+            <svg class="eye-icon eye-open" viewBox="0 0 24 24"><path d="M12 5C5.6 5 1 12 1 12s4.6 7 11 7 11-7 11-7-4.6-7-11-7zm0 12a5 5 0 1 1 0-10 5 5 0 0 1 0 10zm0-8a3 3 0 1 0 0 6 3 3 0 0 0 0-6z"/></svg>
+            <svg class="eye-icon eye-closed hidden" viewBox="0 0 24 24"><path d="M12 5C5.6 5 1 12 1 12s4.6 7 11 7 11-7 11-7-4.6-7-11-7zm0 12a5 5 0 1 1 0-10 5 5 0 0 1 0 10zm0-8a3 3 0 1 0 0 6 3 3 0 0 0 0-6z"/><line x1="1" y1="1" x2="23" y2="23" stroke="currentColor" stroke-width="2"/></svg>
+          </button>
+        </div>
+      </div>
+
+      <button type="submit" class="submit-btn" id="loginSubmit">
+        <span>Sign In</span>
+        <svg class="arrow-icon" viewBox="0 0 24 24"><path d="M5 12h14m-7-7 7 7-7 7"/></svg>
+      </button>
+
+      <p class="form-footer">Don't have an account? <a href="#" id="goToRegister">Register</a></p>
+    </form>
+
+    <!-- Registration Form -->
+    <form class="form" id="registerForm" autocomplete="off">
+      <h2 class="form-title">Create Account</h2>
+      <p class="form-subtitle">Fill in the details to get started</p>
+
+      <div class="form-row">
+        <div class="input-group">
+          <label for="firstName">First Name</label>
+          <div class="input-wrapper">
+            <svg class="input-icon" viewBox="0 0 24 24"><path d="M12 12a5 5 0 1 0 0-10 5 5 0 0 0 0 10zm0 2c-5.3 0-8 2.7-8 5v1h16v-1c0-2.3-2.7-5-8-5z"/></svg>
+            <input type="text" id="firstName" placeholder="John" required />
+          </div>
+        </div>
+        <div class="input-group">
+          <label for="lastName">Last Name</label>
+          <div class="input-wrapper">
+            <svg class="input-icon" viewBox="0 0 24 24"><path d="M12 12a5 5 0 1 0 0-10 5 5 0 0 0 0 10zm0 2c-5.3 0-8 2.7-8 5v1h16v-1c0-2.3-2.7-5-8-5z"/></svg>
+            <input type="text" id="lastName" placeholder="Doe" required />
+          </div>
+        </div>
+      </div>
+
+      <div class="input-group">
+        <label for="regEmail">Email</label>
+        <div class="input-wrapper">
+          <svg class="input-icon" viewBox="0 0 24 24"><path d="M20 4H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2zm0 4-8 5-8-5V6l8 5 8-5v2z"/></svg>
+          <input type="email" id="regEmail" placeholder="you@example.com" required />
+        </div>
+      </div>
+
+      <div class="input-group">
+        <label for="dob">Date of Birth</label>
+        <div class="input-wrapper">
+          <svg class="input-icon" viewBox="0 0 24 24"><path d="M19 4h-1V2h-2v2H8V2H6v2H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2zm0 16H5V10h14v10zM5 8V6h14v2H5z"/></svg>
+          <input type="date" id="dob" required />
+        </div>
+      </div>
+
+      <div class="form-row">
+        <div class="input-group">
+          <label for="country">Country</label>
+          <div class="input-wrapper select-wrapper">
+            <svg class="input-icon" viewBox="0 0 24 24"><path d="M12 2C8.1 2 5 5.1 5 9c0 5.3 7 13 7 13s7-7.7 7-13c0-3.9-3.1-7-7-7zm0 9.5A2.5 2.5 0 1 1 12 6a2.5 2.5 0 0 1 0 5.5z"/></svg>
+            <select id="country" required>
+              <option value="" disabled selected>Select Country</option>
+            </select>
+          </div>
+        </div>
+        <div class="input-group">
+          <label for="state">State</label>
+          <div class="input-wrapper select-wrapper">
+            <svg class="input-icon" viewBox="0 0 24 24"><path d="M12 2C8.1 2 5 5.1 5 9c0 5.3 7 13 7 13s7-7.7 7-13c0-3.9-3.1-7-7-7zm0 9.5A2.5 2.5 0 1 1 12 6a2.5 2.5 0 0 1 0 5.5z"/></svg>
+            <select id="state" required disabled>
+              <option value="" disabled selected>Select State</option>
+            </select>
+          </div>
+        </div>
+      </div>
+      <!-- city dropdown -->
+      <div class="input-group">
+        <label for="city">City</label>
+        <div class="input-wrapper select-wrapper">
+          <svg class="input-icon" viewBox="0 0 24 24"><path d="M12 2C8.1 2 5 5.1 5 9c0 5.3 7 13 7 13s7-7.7 7-13c0-3.9-3.1-7-7-7zm0 9.5A2.5 2.5 0 1 1 12 6a2.5 2.5 0 0 1 0 5.5z"/></svg>
+          <select id="city" required disabled>
+            <option value="" disabled selected>Select City</option>
+          </select>
+        </div>
+      </div>
+      <!-- zip and mobile row -->
+      <div class="form-row">
+        <div class="input-group">
+          <label for="zip">Zip Code</label>
+          <div class="input-wrapper">
+            <svg class="input-icon" viewBox="0 0 24 24"><path d="M3 3h18v18H3z"/></svg>
+            <input type="text" id="zip" placeholder="12345" required />
+          </div>
+        </div>
+        <div class="input-group">
+          <label for="mobile">Mobile Number</label>
+          <div class="input-wrapper">
+            <select id="phoneCountry" required>
+              <option value="" disabled selected>Code</option>
+            </select>
+            <input type="tel" id="mobile" placeholder="1234567890" required />
+          </div>
+        </div>
+      </div>
+
+      <div class="input-group">
+        <label for="regPassword">Password</label>
+        <div class="input-wrapper">
+          <svg class="input-icon" viewBox="0 0 24 24"><path d="M18 8h-1V6A5 5 0 0 0 7 6v2H6a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V10a2 2 0 0 0-2-2zM12 17a2 2 0 1 1 0-4 2 2 0 0 1 0 4zm3-9H9V6a3 3 0 0 1 6 0v2z"/></svg>
+          <input type="password" id="regPassword" placeholder="Min 8 characters" required minlength="8" />
+          <button type="button" class="eye-btn" data-target="regPassword" aria-label="Toggle password visibility">
+            <svg class="eye-icon eye-open" viewBox="0 0 24 24"><path d="M12 5C5.6 5 1 12 1 12s4.6 7 11 7 11-7 11-7-4.6-7-11-7zm0 12a5 5 0 1 1 0-10 5 5 0 0 1 0 10zm0-8a3 3 0 1 0 0 6 3 3 0 0 0 0-6z"/></svg>
+            <svg class="eye-icon eye-closed hidden" viewBox="0 0 24 24"><path d="M12 5C5.6 5 1 12 1 12s4.6 7 11 7 11-7 11-7-4.6-7-11-7zm0 12a5 5 0 1 1 0-10 5 5 0 0 1 0 10zm0-8a3 3 0 1 0 0 6 3 3 0 0 0 0-6z"/><line x1="1" y1="1" x2="23" y2="23" stroke="currentColor" stroke-width="2"/></svg>
+          </button>
+        </div>
+        <div class="password-strength" id="passwordStrength">
+          <div class="strength-bar"><div class="strength-fill" id="strengthFill"></div></div>
+          <span class="strength-text" id="strengthText"></span>
+        </div>
+      </div>
+
+      <div class="input-group">
+        <label for="confirmPassword">Confirm Password</label>
+        <div class="input-wrapper">
+          <svg class="input-icon" viewBox="0 0 24 24"><path d="M18 8h-1V6A5 5 0 0 0 7 6v2H6a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V10a2 2 0 0 0-2-2zM12 17a2 2 0 1 1 0-4 2 2 0 0 1 0 4zm3-9H9V6a3 3 0 0 1 6 0v2z"/></svg>
+          <input type="password" id="confirmPassword" placeholder="••••••••" required />
+          <button type="button" class="eye-btn" data-target="confirmPassword" aria-label="Toggle password visibility">
+            <svg class="eye-icon eye-open" viewBox="0 0 24 24"><path d="M12 5C5.6 5 1 12 1 12s4.6 7 11 7 11-7 11-7-4.6-7-11-7zm0 12a5 5 0 1 1 0-10 5 5 0 0 1 0 10zm0-8a3 3 0 1 0 0 6 3 3 0 0 0 0-6z"/></svg>
+            <svg class="eye-icon eye-closed hidden" viewBox="0 0 24 24"><path d="M12 5C5.6 5 1 12 1 12s4.6 7 11 7 11-7 11-7-4.6-7-11-7zm0 12a5 5 0 1 1 0-10 5 5 0 0 1 0 10zm0-8a3 3 0 1 0 0 6 3 3 0 0 0 0-6z"/><line x1="1" y1="1" x2="23" y2="23" stroke="currentColor" stroke-width="2"/></svg>
+          </button>
+        </div>
+        <span class="match-msg hidden" id="matchMsg"></span>
+      </div>
+
+      <button type="submit" class="submit-btn" id="registerSubmit">
+        <span>Create Account</span>
+        <svg class="arrow-icon" viewBox="0 0 24 24"><path d="M5 12h14m-7-7 7 7-7 7"/></svg>
+      </button>
+
+      <p class="form-footer">Already have an account? <a href="#" id="goToLogin">Login</a></p>
+    </form>
+  </div>
+
+  <!-- Toast Notification -->
+  <div class="toast hidden" id="toast">
+    <span class="toast-icon" id="toastIcon"></span>
+    <span class="toast-msg" id="toastMsg"></span>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
