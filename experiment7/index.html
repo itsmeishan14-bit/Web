@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Marks Portal | Premium Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <h1>Electro<span>Student</span> Hub</h1>
+            <p>Switch between Electronics Store and Student Management Portal.</p>
+            <div class="mode-toggle">
+                <button id="modeElectronics" class="active">Electronics Mode</button>
+                <button id="modeStudents">Students Mode</button>
+            </div>
+            <div class="cart-summary electronics-only" id="viewCart" title="View Cart">
+                <span class="icon">🛒</span>
+                <span id="cartCount">0</span> Items
+                <span class="total" id="cartTotal">$0</span>
+            </div>
+        </header>
+
+        <section class="controls">
+            <div class="search-sort-group">
+                <div class="input-container">
+                    <input type="text" id="searchId" placeholder="Search by ID...">
+                    <span class="icon">🆔</span>
+                </div>
+                <div class="input-container">
+                    <input type="text" id="searchName" placeholder="Search by Name...">
+                    <span class="icon">🔍</span>
+                </div>
+                <div class="sort-buttons">
+                    <button id="sortAsc" title="Sort Low to High">↑ Sort</button>
+                    <button id="sortDesc" title="Sort High to Low">↓ Sort</button>
+                </div>
+            </div>
+
+            <div class="filter-buttons">
+                <button id="showAll" class="active">Show All</button>
+
+                <!-- Electronics Filters -->
+                <div class="btn-group electronics-only">
+                    <span>Category:</span>
+                    <button id="filterLaptops">Laptops</button>
+                    <button id="filterPhones">Phones</button>
+                    <button id="filterAudio">Audio</button>
+                </div>
+                <div class="btn-group electronics-only">
+                    <span>Rating:</span>
+                    <button id="rating45">4.5+</button>
+                    <button id="rating48">4.8+</button>
+                </div>
+
+                <!-- Student Filters -->
+                <div class="btn-group students-only">
+                    <span>Course:</span>
+                    <button id="filterCS">CS</button>
+                    <button id="filterBusiness">Bus</button>
+                    <button id="filterArts">Arts</button>
+                </div>
+                <div class="btn-group students-only">
+                    <span>Performance:</span>
+                    <button id="filterPass">Pass</button>
+                    <button id="filterFail">Fail</button>
+                    <button id="filterDistinction">Distinction</button>
+                    <button id="showTopper" class="special">Topper</button>
+                </div>
+
+                <button id="clearCart" class="danger electronics-only">Clear Cart</button>
+            </div>
+        </section>
+
+        <main class="table-container glass">
+            <table id="productTable">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Product</th>
+                        <th>Category</th>
+                        <th>Rating</th>
+                        <th>Price</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody id="tableBody">
+                    <!-- Data will be injected here -->
+                </tbody>
+            </table>
+            <div id="noData" class="hidden">No products found matching your search.</div>
+        </main>
+
+        <footer>
+            <p>&copy; 2026 ElectroHub Premium. All rights reserved.</p>
+        </footer>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
